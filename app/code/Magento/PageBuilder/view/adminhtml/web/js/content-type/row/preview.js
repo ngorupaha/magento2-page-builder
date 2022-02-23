@@ -122,10 +122,8 @@ define(["jarallax", "jarallaxVideo", "jquery", "knockout", "Magento_PageBuilder/
     _proto.getBackgroundImage = function getBackgroundImage() {
       var mobileImage = this.contentType.dataStore.get("mobile_image");
       var desktopImage = this.contentType.dataStore.get("background_image");
-      var imageOverlayColor = this.contentType.dataStore.get("image_overlay_color");
       var backgroundImage = this.viewport() === "mobile" && mobileImage.length ? mobileImage : desktopImage;
-      var imageOverlay = imageOverlayColor.length ? "linear-gradient("+imageOverlayColor+", "+imageOverlayColor+")," : "";
-      return (backgroundImage.length ? imageOverlay + "url(\"" + backgroundImage[0].url + "\")" : "none");
+      return backgroundImage.length ? "url(\"" + backgroundImage[0].url + "\")" : "none";
     }
     /**
      * Toggle fullscreen

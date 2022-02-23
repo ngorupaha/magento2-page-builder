@@ -75,6 +75,10 @@
                             <style name="video_overlay_color" source="background_color" converter="Magento_PageBuilder/js/converter/style/video-overlay-color" persistence_mode="write"/>
                             <attribute name="video_overlay_color_attribute" storage_key="video_overlay_color" source="data-video-overlay-color" converter="Magento_PageBuilder/js/converter/attribute/video-overlay-color"/>
                         </element>
+                        <element name="image_overlay">
+                            <style name="image_overlay_color" source="background_color" converter="Magento_PageBuilder/js/converter/style/image-overlay-color" persistence_mode="write"/>
+                            <attribute name="image_overlay_color_attribute" storage_key="image_overlay_color" source="data-image-overlay-color" converter="Magento_PageBuilder/js/converter/attribute/image-overlay-color"/>
+                        </element>
                     </elements>
                     <converters>
                         <converter name="background_type" component="Magento_PageBuilder/js/mass-converter/background-type">
@@ -85,6 +89,7 @@
                                 <item name="video_source_variable" value="video_source"/>
                                 <item name="video_fallback_image_variable" value="video_fallback_image"/>
                                 <item name="video_overlay_color_variable" value="video_overlay_color"/>
+                                <item name="image_overlay_color_variable" value="image_overlay_color"/>
                             </config>
                         </converter>
                         <converter name="background_images" component="Magento_PageBuilder/js/mass-converter/background-images">
@@ -92,7 +97,6 @@
                                 <item name="attribute_name" value="background_images"/>
                                 <item name="desktop_image_variable" value="background_image"/>
                                 <item name="mobile_image_variable" value="mobile_image"/>
-                                <item name="image_overlay_color_variable" value="image_overlay_color"/>
                             </config>
                         </converter>
                     </converters>
@@ -142,6 +146,10 @@
                         <style name="video_overlay_color" source="background_color" converter="Magento_PageBuilder/js/converter/style/video-overlay-color" persistence_mode="write"/>
                         <attribute name="video_overlay_color_attribute" storage_key="video_overlay_color" source="data-video-overlay-color" converter="Magento_PageBuilder/js/converter/attribute/video-overlay-color"/>
                     </element>
+                    <element name="image_overlay">
+                        <style name="image_overlay_color" source="background_color" converter="Magento_PageBuilder/js/converter/style/image-overlay-color" persistence_mode="write"/>
+                        <attribute name="image_overlay_color_attribute" storage_key="image_overlay_color" source="data-image-overlay-color" converter="Magento_PageBuilder/js/converter/attribute/image-overlay-color"/>
+                    </element>
                 </elements>
                 <converters>
                     <converter name="background_images" component="Magento_PageBuilder/js/mass-converter/background-images">
@@ -149,7 +157,6 @@
                             <item name="attribute_name" value="background_images"/>
                             <item name="desktop_image_variable" value="background_image"/>
                             <item name="mobile_image_variable" value="mobile_image"/>
-                            <item name="image_overlay_color_variable" value="image_overlay_color"/>
                         </config>
                     </converter>
                     <converter name="background_type" component="Magento_PageBuilder/js/mass-converter/background-type">
@@ -160,6 +167,7 @@
                             <item name="video_source_variable" value="video_source"/>
                             <item name="video_fallback_image_variable" value="video_fallback_image"/>
                             <item name="video_overlay_color_variable" value="video_overlay_color"/>
+                            <item name="image_overlay_color_variable" value="image_overlay_color"/>
                         </config>
                     </converter>
                 </converters>
@@ -209,6 +217,10 @@
                         <style name="video_overlay_color" source="background_color" converter="Magento_PageBuilder/js/converter/style/video-overlay-color" persistence_mode="write"/>
                         <attribute name="video_overlay_color_attribute" storage_key="video_overlay_color" source="data-video-overlay-color" converter="Magento_PageBuilder/js/converter/attribute/video-overlay-color"/>
                     </element>
+                    <element name="image_overlay">
+                        <style name="image_overlay_color" source="background_color" converter="Magento_PageBuilder/js/converter/style/image-overlay-color" persistence_mode="write"/>
+                        <attribute name="image_overlay_color_attribute" storage_key="image_overlay_color" source="data-image-overlay-color" converter="Magento_PageBuilder/js/converter/attribute/image-overlay-color"/>
+                    </element>
                 </elements>
                 <converters>
                     <converter name="background_images" component="Magento_PageBuilder/js/mass-converter/background-images">
@@ -216,7 +228,6 @@
                             <item name="attribute_name" value="background_images"/>
                             <item name="desktop_image_variable" value="background_image"/>
                             <item name="mobile_image_variable" value="mobile_image"/>
-                            <item name="image_overlay_color_variable" value="image_overlay_color"/>
                         </config>
                     </converter>
                     <converter name="background_type" component="Magento_PageBuilder/js/mass-converter/background-type">
@@ -227,6 +238,7 @@
                             <item name="video_source_variable" value="video_source"/>
                             <item name="video_fallback_image_variable" value="video_fallback_image"/>
                             <item name="video_overlay_color_variable" value="video_overlay_color"/>
+                            <item name="image_overlay_color_variable" value="image_overlay_color"/>
                         </config>
                     </converter>
                 </converters>

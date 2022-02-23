@@ -25,6 +25,10 @@
                  class="video-overlay"
                  attr="data.video_overlay.attributes"
                  ko-style="data.video_overlay.style"></div>
+            <div if="data.image_overlay.attributes()['data-image-overlay-color']"
+                 class="image-overlay"
+                 attr="data.image_overlay.attributes"
+                 ko-style="data.image_overlay.style"></div>
             <render args="getOptions().template"></render>
             <div class="element-children content-type-container" each="contentType.getChildren()" ko-style="data.container.style" css="getChildrenCss()" attr="{id: contentType.id + '-children'}" data-bind="sortable: getSortableOptions()" afterRender="function (element) { if (typeof afterChildrenRender === 'function') { afterChildrenRender(element); } }">
                 <if args="$parent.isContainer()">

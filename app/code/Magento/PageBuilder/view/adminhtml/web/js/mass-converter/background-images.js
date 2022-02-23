@@ -33,10 +33,6 @@ define(["underscore", "Magento_PageBuilder/js/utils/image", "Magento_PageBuilder
           (0, _object.set)(data, config.mobile_image_variable, (0, _image.decodeUrl)(images.mobile_image));
         }
 
-        if (!_underscore.isUndefined(images.image_overlay_color)) {
-          (0, _object.set)(data, config.image_overlay_color_variable, images.image_overlay_color);
-        }
-
         delete data[config.attribute_name];
       }
 
@@ -54,7 +50,6 @@ define(["underscore", "Magento_PageBuilder/js/utils/image", "Magento_PageBuilder
     _proto.toDom = function toDom(data, config) {
       var desktopImage = (0, _object.get)(data, config.desktop_image_variable);
       var mobileImage = (0, _object.get)(data, config.mobile_image_variable);
-      var imageOverlay = (0, _object.get)(data, config.image_overlay_color_variable);
       var directiveData = {};
 
       if (!_underscore.isUndefined(desktopImage) && desktopImage && !_underscore.isUndefined(desktopImage[0])) {
@@ -65,9 +60,6 @@ define(["underscore", "Magento_PageBuilder/js/utils/image", "Magento_PageBuilder
         directiveData.mobile_image = (0, _image.urlToDirective)(mobileImage[0].url);
       } // Add the directive data, ensuring we escape double quotes
 
-      if (!_underscore.isUndefined(imageOverlay) && imageOverlay) {
-        directiveData.image_overlay_color = imageOverlay;
-      }
 
       (0, _object.set)(data, config.attribute_name, JSON.stringify(directiveData).replace(/[\\"']/g, "\\$&").replace(/\u0000/g, "\\0"));
       return data;

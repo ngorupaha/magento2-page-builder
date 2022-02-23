@@ -1,0 +1,28 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Image -- Overlay
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+  div[data-background-type='image'] {
+    position: relative;
+    z-index: 1;
+    > div {
+      z-index: 2;
+    }
+  }
+
+  .image-overlay {
+    -webkit-transform: translate3d(0,0,0);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

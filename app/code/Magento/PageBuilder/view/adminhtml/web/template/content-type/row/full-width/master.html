@@ -12,6 +12,10 @@
          class="video-overlay"
          attr="data.video_overlay.attributes"
          ko-style="data.video_overlay.style"></div>
+    <div if="data.image_overlay.attributes()['data-image-overlay-color']"
+         class="image-overlay"
+         attr="data.image_overlay.attributes"
+         ko-style="data.image_overlay.style"></div>
     <div class="row-full-width-inner"
          attr="data.inner.attributes"
          ko-style="data.inner.style"
