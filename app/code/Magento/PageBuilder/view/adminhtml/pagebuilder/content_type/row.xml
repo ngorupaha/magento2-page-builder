@@ -92,6 +92,7 @@
                                 <item name="attribute_name" value="background_images"/>
                                 <item name="desktop_image_variable" value="background_image"/>
                                 <item name="mobile_image_variable" value="mobile_image"/>
+                                <item name="image_overlay_color_variable" value="image_overlay_color"/>
                             </config>
                         </converter>
                     </converters>
@@ -148,6 +149,7 @@
                             <item name="attribute_name" value="background_images"/>
                             <item name="desktop_image_variable" value="background_image"/>
                             <item name="mobile_image_variable" value="mobile_image"/>
+                            <item name="image_overlay_color_variable" value="image_overlay_color"/>
                         </config>
                     </converter>
                     <converter name="background_type" component="Magento_PageBuilder/js/mass-converter/background-type">
@@ -214,6 +216,7 @@
                             <item name="attribute_name" value="background_images"/>
                             <item name="desktop_image_variable" value="background_image"/>
                             <item name="mobile_image_variable" value="mobile_image"/>
+                            <item name="image_overlay_color_variable" value="image_overlay_color"/>
                         </config>
                     </converter>
                     <converter name="background_type" component="Magento_PageBuilder/js/mass-converter/background-type">

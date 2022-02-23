@@ -303,19 +303,23 @@ class Template
     private function generateCssFromImages(string $elementClass, array $images) : string
     {
         $css = [];
+        $image_overlay = "";
+        if (isset($images['image_overlay_color'])) {
+            $image_overlay = "linear-gradient(" . $images['image_overlay_color'] . ", " . $images['image_overlay_color'] . "),";
+        }
         if (isset($images['desktop_image'])) {
             $css['.' . $elementClass] = [
-                'background-image' => 'url(' . $images['desktop_image'] . ')',
+                'background-image' => $image_overlay . 'url(' . $images['desktop_image'] . ')',
             ];
         }
         if (isset($images['mobile_image']) && $this->getMediaQuery('mobile')) {
             $css[$this->getMediaQuery('mobile')]['.' . $elementClass] = [
-                'background-image' => 'url(' . $images['mobile_image'] . ')',
+                'background-image' => $image_overlay . 'url(' . $images['mobile_image'] . ')',
             ];
         }
         if (isset($images['mobile_image']) && $this->getMediaQuery('mobile-small')) {
             $css[$this->getMediaQuery('mobile-small')]['.' . $elementClass] = [
-                'background-image' => 'url(' . $images['mobile_image'] . ')',
+                'background-image' => $image_overlay . 'url(' . $images['mobile_image'] . ')',
             ];
         }
         return $this->cssFromArray($css);

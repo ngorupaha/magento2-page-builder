@@ -46,6 +46,14 @@
                 </imports>
             </settings>
         </field>
+        <field name="image_overlay_color" sortOrder="45">
+            <settings>
+                <visible>false</visible>
+                <imports>
+                    <link name="visible">${$.parentName}.background_type:imageVisible</link>
+                </imports>
+            </settings>
+        </field>
         <field name="background_size" sortOrder="50">
             <settings>
                 <visible>false</visible>

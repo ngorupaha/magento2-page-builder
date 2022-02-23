@@ -420,6 +420,7 @@
                 <item name="style" xsi:type="string">style</item>
                 <item name="target" xsi:type="string">target</item>
                 <item name="title" xsi:type="string">title</item>
+                <item name="data-image-overlay-color" xsi:type="string">data-image-overlay-color</item>
             </argument>
             <argument name="attributesAllowedByTags" xsi:type="array">
                 <item name="a" xsi:type="array">
